@@ -28,10 +28,10 @@ const zoneConfigs = [
 
 // Loop configurations
 const loopConfigs = [
-    { id: 'loop-backing', audio: './audio/loops/MUSIC_BACKING12jun.mp3' },
-    { id: 'loop-diva', audio: './audio/loops/STEM_DIVA_LEAD12jun.mp3' },
-    { id: 'loop-moog', audio: './audio/loops/STEM_MOOGBASS12jun.mp3' },
-    { id: 'loop-noise', audio: './audio/loops/STEM_NOISE_COUNTER12jun.mp3' }
+    { id: 'loop-backing', audio: './audio/loops/MUSIC_BACKING_12jun.mp3' },
+    { id: 'loop-diva', audio: './audio/loops/STEM_DIVA_LEAD_12jun.mp3' },
+    { id: 'loop-moog', audio: './audio/loops/STEM_MOOGBASS_12jun.mp3' },
+    { id: 'loop-noise', audio: './audio/loops/STEM_NOISE_COUNTER_12jun.mp3' }
 ];
 
 // State management
