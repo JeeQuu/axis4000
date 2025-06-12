@@ -7,31 +7,31 @@ let masterGainNode;
 
 // Zone configurations
 const zoneConfigs = [
-    { id: 'zone-counter', label: '🎵 Countermelody', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/countermelody.mp3', cursor: 'cursor-coffee' },
-    { id: 'zone-diva-01', label: '🎤 Diva 01', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_01.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-02', label: '🎤 Diva 02', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_02.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-03', label: '🎤 Diva 03', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_03.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-04', label: '🎤 Diva 04', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_04.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-05', label: '🎤 Diva 05', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_05.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-06', label: '🎤 Diva 06', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_06.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-07', label: '🎤 Diva 07', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_07.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-08', label: '🎤 Diva 08', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_08.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-09', label: '🎤 Diva 09', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_09.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-10', label: '🎤 Diva 10', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_10.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-moog-01', label: '🎸 Moog 01', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0101.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-02', label: '🎸 Moog 02', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0102.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-03', label: '🎸 Moog 03', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0103.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-04', label: '🎸 Moog 04', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0104.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-05', label: '🎸 Moog 05', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0105.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-noise', label: '💥 Noise Splash', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/noise_splash.mp3', cursor: 'cursor-tennis' }
+    { id: 'zone-counter', label: '🎵 Countermelody', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/countermelody.mp3', cursor: 'cursor-coffee' },
+    { id: 'zone-diva-01', label: '🎤 Diva 01', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_01.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-02', label: '🎤 Diva 02', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_02.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-03', label: '🎤 Diva 03', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_03.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-04', label: '🎤 Diva 04', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_04.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-05', label: '🎤 Diva 05', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_05.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-06', label: '🎤 Diva 06', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_06.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-07', label: '🎤 Diva 07', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_07.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-08', label: '🎤 Diva 08', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_08.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-09', label: '🎤 Diva 09', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_09.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-10', label: '🎤 Diva 10', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/diva_lead_dry_10.mp3', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-moog-01', label: '🎸 Moog 01', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0101.mp3', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-02', label: '🎸 Moog 02', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0102.mp3', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-03', label: '🎸 Moog 03', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0103.mp3', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-04', label: '🎸 Moog 04', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0104.mp3', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-05', label: '🎸 Moog 05', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/moog_bass_0105.mp3', cursor: 'cursor-extinguisher' },
+    { id: 'zone-noise', label: '💥 Noise Splash', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/noise_splash.mp3', cursor: 'cursor-tennis' }
 ];
 
 // Loop configurations
 const loopConfigs = [
-    { id: 'loop-backing', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/MUSIC_BACKING12jun.mp3' },
-    { id: 'loop-diva', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_DIVA_LEAD12jun.mp3' },
-    { id: 'loop-moog', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_MOOGBASS12jun.mp3' },
-    { id: 'loop-noise', audio: 'https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_NOISE_COUNTER12jun.mp3' }
+    { id: 'loop-backing', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/MUSIC_BACKING12jun.mp3' },
+    { id: 'loop-diva', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_DIVA_LEAD12jun.mp3' },
+    { id: 'loop-moog', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_MOOGBASS12jun.mp3' },
+    { id: 'loop-noise', audio: 'https://cors-anywhere.herokuapp.com/https://github.com/JeeQuu/axis4000/releases/download/v1.0/STEM_NOISE_COUNTER12jun.mp3' }
 ];
 
 // State management
