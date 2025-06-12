@@ -1,0 +1,309 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Start Screen */
+.start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.start-content {
+    text-align: center;
+}
+
+.start-content h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.start-content p {
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Main App */
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Header */
+.header {
+    background-color: #111111;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.control-button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+}
+
+.control-button:hover {
+    background-color: #2a2a2a;
+    border-color: #555;
+}
+
+/* Control Panel */
+.control-panel {
+    background-color: #111111;
+    padding: 20px 30px;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #333;
+}
+
+.control-panel h3 {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Loop Controls */
+.loop-toggles {
+    display: flex;
+    gap: 20px;
+}
+
+.loop-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.loop-toggle input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.loop-toggle span {
+    font-size: 0.95em;
+}
+
+/* Effects Controls */
+.effect-control {
+    margin-bottom: 15px;
+}
+
+.effect-control label {
+    display: block;
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.effect-control input[type="range"] {
+    width: 150px;
+    height: 4px;
+    background: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+.effect-control input[type="range"]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    background: #2563eb;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-appearance: none;
+}
+
+.effect-control span {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.85em;
+    color: #888;
+    width: 50px;
+}
+
+/* Mode Controls */
+.mode-toggle {
+    display: flex;
+    gap: 20px;
+}
+
+.mode-toggle input[type="radio"] {
+    margin-right: 5px;
+}
+
+.mode-toggle label {
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+/* Camera Grid */
+.camera-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    background-color: #000;
+    padding: 2px;
+}
+
+.camera-view {
+    background-color: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+.camera-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    z-index: 10;
+}
+
+.camera-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Detection Zones */
+.detection-zone {
+    position: absolute;
+    border: 2px solid #2563eb;
+    background-color: rgba(37, 99, 235, 0.1);
+    cursor: move;
+    transition: all 0.2s ease;
+    min-width: 100px;
+    min-height: 60px;
+}
+
+.detection-zone:hover {
+    background-color: rgba(37, 99, 235, 0.2);
+    border-color: #3b82f6;
+}
+
+.detection-zone.active {
+    background-color: rgba(37, 99, 235, 0.3);
+    border-color: #60a5fa;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+.detection-zone.dragging {
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+.zone-label {
+    position: absolute;
+    top: -25px;
+    left: -2px;
+    background-color: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.85em;
+    border-radius: 4px 4px 0 0;
+    white-space: nowrap;
+}
+
+.zone-resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    cursor: nw-resize;
+}
+
+.zone-resize-handle::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #2563eb transparent;
+}
+
+/* Custom Cursors */
+.cursor-coffee { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="0" y="24" font-size="24">☕</text></svg>') 16 16, auto; }
+.cursor-sunflower { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="0" y="24" font-size="24">🌻</text></svg>') 16 16, auto; }
+.cursor-extinguisher { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="0" y="24" font-size="24">🧯</text></svg>') 16 16, auto; }
+.cursor-tennis { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="0" y="24" font-size="24">🎾</text></svg>') 16 16, auto; }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .control-panel {
+        flex-wrap: wrap;
+    }
+}

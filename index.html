@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantastical Camera Performance Simulator x4000</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio Context Start Screen -->
+    <div id="startScreen" class="start-screen">
+        <div class="start-content">
+            <h1>Quantastical Camera Performance Simulator x4000</h1>
+            <p>Click to initialize audio system</p>
+            <button id="startButton" class="start-button">Start Simulation</button>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="app hidden">
+        <!-- Header -->
+        <header class="header">
+            <h1>Quantastical Camera Performance Simulator x4000</h1>
+            <div class="header-controls">
+                <button id="saveLayout" class="control-button">Save Layout</button>
+                <button id="loadLayout" class="control-button">Load Layout</button>
+            </div>
+        </header>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <!-- Loop Controls -->
+            <div class="loop-controls">
+                <h3>Background Loops</h3>
+                <div class="loop-toggles">
+                    <label class="loop-toggle">
+                        <input type="checkbox" id="loop-backing" checked>
+                        <span>Backing</span>
+                    </label>
+                    <label class="loop-toggle">
+                        <input type="checkbox" id="loop-diva" checked>
+                        <span>Diva Lead</span>
+                    </label>
+                    <label class="loop-toggle">
+                        <input type="checkbox" id="loop-moog" checked>
+                        <span>Moog Bass</span>
+                    </label>
+                    <label class="loop-toggle">
+                        <input type="checkbox" id="loop-noise" checked>
+                        <span>Noise Counter</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Effects Controls -->
+            <div class="effects-controls">
+                <h3>Effects</h3>
+                <div class="effect-control">
+                    <label>Reverb Dry/Wet</label>
+                    <input type="range" id="reverbMix" min="0" max="100" value="30">
+                    <span id="reverbMixValue">30%</span>
+                </div>
+                <div class="effect-control">
+                    <label>Reverb Length</label>
+                    <input type="range" id="reverbLength" min="0.1" max="5" step="0.1" value="2">
+                    <span id="reverbLengthValue">2.0s</span>
+                </div>
+                <div class="effect-control">
+                    <label>Tracking Lag</label>
+                    <input type="range" id="trackingLag" min="0" max="1000" value="100">
+                    <span id="trackingLagValue">100ms</span>
+                </div>
+            </div>
+
+            <!-- Zone Mode Toggle -->
+            <div class="mode-controls">
+                <h3>Zone Trigger Mode</h3>
+                <div class="mode-toggle">
+                    <input type="radio" id="modeOneShot" name="triggerMode" value="oneshot" checked>
+                    <label for="modeOneShot">One Shot</label>
+                    <input type="radio" id="modeHold" name="triggerMode" value="hold">
+                    <label for="modeHold">Hold</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Camera Grid -->
+        <div class="camera-grid">
+            <div class="camera-view" id="camera1" data-camera="1">
+                <div class="camera-label">Camera 1</div>
+                <div class="camera-screen"></div>
+            </div>
+            <div class="camera-view" id="camera2" data-camera="2">
+                <div class="camera-label">Camera 2</div>
+                <div class="camera-screen"></div>
+            </div>
+            <div class="camera-view" id="camera3" data-camera="3">
+                <div class="camera-label">Camera 3</div>
+                <div class="camera-screen"></div>
+            </div>
+            <div class="camera-view" id="camera4" data-camera="4">
+                <div class="camera-label">Camera 4</div>
+                <div class="camera-screen"></div>
+            </div>
+        </div>
+
+        <!-- Zone Template (will be cloned for each zone) -->
+        <template id="zoneTemplate">
+            <div class="detection-zone" draggable="true">
+                <div class="zone-label"></div>
+                <div class="zone-resize-handle"></div>
+            </div>
+        </template>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
