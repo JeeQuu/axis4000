@@ -23,15 +23,15 @@ const zoneConfigs = [
     { id: 'zone-moog-03', label: '🎸 Moog 03', audio: './audio/zones/moog_bass_0103.mp3', cursor: 'cursor-extinguisher' },
     { id: 'zone-moog-04', label: '🎸 Moog 04', audio: './audio/zones/moog_bass_0104.mp3', cursor: 'cursor-extinguisher' },
     { id: 'zone-moog-05', label: '🎸 Moog 05', audio: './audio/zones/moog_bass_0105.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-noise', label: '💥 Noise Splash', audio: './audio/zones/noise splash.mp3', cursor: 'cursor-tennis' }
+    { id: 'zone-noise', label: '💥 Noise Splash', audio: './audio/zones/noise_splash.mp3', cursor: 'cursor-tennis' }
 ];
 
 // Loop configurations
 const loopConfigs = [
-    { id: 'loop-backing', audio: './audio/loops/MUSIC_BACKING 12jun.mp3' },
-    { id: 'loop-diva', audio: './audio/loops/STEM_DIVA_LEAD 12jun.mp3' },
-    { id: 'loop-moog', audio: './audio/loops/STEM_MOOGBASS 12jun.mp3' },
-    { id: 'loop-noise', audio: './audio/loops/STEM_NOISE_COUNTER 12jun.mp3' }
+    { id: 'loop-backing', audio: './audio/loops/MUSIC_BACKING_12jun.mp3' },
+    { id: 'loop-diva', audio: './audio/loops/STEM_DIVA_LEAD_12jun.mp3' },
+    { id: 'loop-moog', audio: './audio/loops/STEM_MOOGBASS_12jun.mp3' },
+    { id: 'loop-noise', audio: './audio/loops/STEM_NOISE_COUNTER_12jun.mp3' }
 ];
 
 // State management
