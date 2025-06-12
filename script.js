@@ -7,31 +7,31 @@ let masterGainNode;
 
 // Zone configurations
 const zoneConfigs = [
-    { id: 'zone-counter', label: '🎵 Countermelody', audio: './audio/zones/countermelody.mp3', cursor: 'cursor-coffee' },
-    { id: 'zone-diva-01', label: '🎤 Diva 01', audio: './audio/zones/diva_lead_dry_01.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-02', label: '🎤 Diva 02', audio: './audio/zones/diva_lead_dry_02.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-03', label: '🎤 Diva 03', audio: './audio/zones/diva_lead_dry_03.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-04', label: '🎤 Diva 04', audio: './audio/zones/diva_lead_dry_04.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-05', label: '🎤 Diva 05', audio: './audio/zones/diva_lead_dry_05.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-06', label: '🎤 Diva 06', audio: './audio/zones/diva_lead_dry_06.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-07', label: '🎤 Diva 07', audio: './audio/zones/diva_lead_dry_07.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-08', label: '🎤 Diva 08', audio: './audio/zones/diva_lead_dry_08.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-09', label: '🎤 Diva 09', audio: './audio/zones/diva_lead_dry_09.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-diva-10', label: '🎤 Diva 10', audio: './audio/zones/diva_lead_dry_10.mp3', cursor: 'cursor-sunflower', reverb: true },
-    { id: 'zone-moog-01', label: '🎸 Moog 01', audio: './audio/zones/moog_bass_0101.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-02', label: '🎸 Moog 02', audio: './audio/zones/moog_bass_0102.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-03', label: '🎸 Moog 03', audio: './audio/zones/moog_bass_0103.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-04', label: '🎸 Moog 04', audio: './audio/zones/moog_bass_0104.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-moog-05', label: '🎸 Moog 05', audio: './audio/zones/moog_bass_0105.mp3', cursor: 'cursor-extinguisher' },
-    { id: 'zone-noise', label: '💥 Noise Splash', audio: './audio/zones/noise_splash.mp3', cursor: 'cursor-tennis' }
+    { id: 'zone-counter', label: '🎵 Countermelody', audio: 'https://www.dropbox.com/scl/fi/lj8zpomf6p5emopzx4gcs/countermelody.mp3?rlkey=4ru6vm80wpls5xr4xi5e2vb3y&raw=1', cursor: 'cursor-coffee' },
+    { id: 'zone-diva-01', label: '🎤 Diva 01', audio: 'https://www.dropbox.com/scl/fi/hxvg0zz3n9i2xyl3lvlfz/diva_lead_dry_01.mp3?rlkey=0fjtp18naubeuuvjri6i9y2bu&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-02', label: '🎤 Diva 02', audio: 'https://www.dropbox.com/scl/fi/zb21t7gu9uv6h561p1eko/diva_lead_dry_02.mp3?rlkey=lgc79hefw6wvs8wk587smwcdk&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-03', label: '🎤 Diva 03', audio: 'https://www.dropbox.com/scl/fi/juhp6wry7y0hfvwir03qk/diva_lead_dry_03.mp3?rlkey=j4xsm200wz8lu5q6d97zl6zh9&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-04', label: '🎤 Diva 04', audio: 'https://www.dropbox.com/scl/fi/3p3vybbpati0eminjgyms/diva_lead_dry_04.mp3?rlkey=usmbyrd9iawutfzxambspg2ox&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-05', label: '🎤 Diva 05', audio: 'https://www.dropbox.com/scl/fi/t257qxrk5gd56o7moja7t/diva_lead_dry_05.mp3?rlkey=extu09bwjapldsnwusjbrtm4z&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-06', label: '🎤 Diva 06', audio: 'https://www.dropbox.com/scl/fi/16p35qrf1o3lzfma5uqom/diva_lead_dry_06.mp3?rlkey=5aiilg2d4nw3dn6y6xjc1rv3u&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-07', label: '🎤 Diva 07', audio: 'https://www.dropbox.com/scl/fi/sf9328sl39ar2yxr9s07i/diva_lead_dry_07.mp3?rlkey=a0afxofsgruxzyn4lp9c1v3dm&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-08', label: '🎤 Diva 08', audio: 'https://www.dropbox.com/scl/fi/x2df9nbdvtxlt6b5cto5x/diva_lead_dry_08.mp3?rlkey=wbg9izbics336zgumuz7gaxc0&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-09', label: '🎤 Diva 09', audio: 'https://www.dropbox.com/scl/fi/s765bdnohfoj71zrv14k9/diva_lead_dry_09.mp3?rlkey=agsi1doff77xmanyrg0ajum23&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-diva-10', label: '🎤 Diva 10', audio: 'https://www.dropbox.com/scl/fi/1aqcr14fnn3ioe1veyr3m/diva_lead_dry_10.mp3?rlkey=vxpheur2bf3dva3e6r4m4r2hh&raw=1', cursor: 'cursor-sunflower', reverb: true },
+    { id: 'zone-moog-01', label: '🎸 Moog 01', audio: 'https://www.dropbox.com/scl/fi/xeoikxt4ykuivzcf25j4q/moog_bass_0101.mp3?rlkey=um9njh5rkijj89ltxlve0dpu0&raw=1', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-02', label: '🎸 Moog 02', audio: 'https://www.dropbox.com/scl/fi/fqgumuyffpuoug5flkcsj/moog_bass_0102.mp3?rlkey=bxpxl13dmpax88vqpi382y9z1&raw=1', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-03', label: '🎸 Moog 03', audio: 'https://www.dropbox.com/scl/fi/e7r024cokmpzoxi3aktmt/moog_bass_0103.mp3?rlkey=29znkr252hb6fqoe2w3p1k30m&raw=1', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-04', label: '🎸 Moog 04', audio: 'https://www.dropbox.com/scl/fi/sgrg4p0cgknlxsjld2lfm/moog_bass_0104.mp3?rlkey=ujyqm15n2p78papctoqv3p66g&raw=1', cursor: 'cursor-extinguisher' },
+    { id: 'zone-moog-05', label: '🎸 Moog 05', audio: 'https://www.dropbox.com/scl/fi/qndgzt9af7z7exhlrejdu/moog_bass_0105.mp3?rlkey=6bm1czhstxcstame0un2dktyo&raw=1', cursor: 'cursor-extinguisher' },
+    { id: 'zone-noise', label: '💥 Noise Splash', audio: 'https://www.dropbox.com/scl/fi/bw33aehefilfq374izg4i/noise_splash.mp3?rlkey=lfjg6hppo3jm5mde0pcsm7drc&raw=1', cursor: 'cursor-tennis' }
 ];
 
 // Loop configurations
 const loopConfigs = [
-    { id: 'loop-backing', audio: './audio/loops/MUSIC_BACKING_12jun.mp3' },
-    { id: 'loop-diva', audio: './audio/loops/STEM_DIVA_LEAD_12jun.mp3' },
-    { id: 'loop-moog', audio: './audio/loops/STEM_MOOGBASS_12jun.mp3' },
-    { id: 'loop-noise', audio: './audio/loops/STEM_NOISE_COUNTER_12jun.mp3' }
+    { id: 'loop-backing', audio: 'https://www.dropbox.com/scl/fi/xsel03thtidcp6on2lk4u/MUSIC_BACKING12jun.mp3?rlkey=m4zcybpahcau106i74y2p83j6&raw=1' },
+    { id: 'loop-diva', audio: 'https://www.dropbox.com/scl/fi/7sgs0seprabvo3b43150m/STEM_DIVA_LEAD12jun.mp3?rlkey=hf77ywrgxdo1ba93nin9jwcvj&raw=1' },
+    { id: 'loop-moog', audio: 'https://www.dropbox.com/scl/fi/ntnauj18hf6e3oc9uq720/STEM_MOOGBASS12jun.mp3?rlkey=v9y2ppddngt8xl99oxm8n4knr&raw=1' },
+    { id: 'loop-noise', audio: 'https://www.dropbox.com/scl/fi/oit4grsofcty43zoaplui/STEM_NOISE_COUNTER12jun.mp3?rlkey=nv58wsia1005va4zkkygcwx9g&raw=1' }
 ];
 
 // State management
