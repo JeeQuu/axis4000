@@ -91,18 +91,33 @@ async function initializeAudio() {
 
 // Create audio buffer source
 async function createAudioSource(url, loop = false) {
-    const response = await fetch(url);
-    const arrayBuffer = await response.arrayBuffer();
-    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-    
-    const source = audioContext.createBufferSource();
-    source.buffer = audioBuffer;
-    source.loop = loop;
-    
-    const gainNode = audioContext.createGain();
-    source.connect(gainNode);
-    
-    return { source, gainNode };
+    try {
+        console.log('Attempting to fetch audio from:', url);
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        console.log('Fetch successful, response size:', response.headers.get('content-length'));
+        const arrayBuffer = await response.arrayBuffer();
+        console.log('ArrayBuffer size:', arrayBuffer.byteLength);
+        
+        const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+        console.log('Audio decoded successfully, duration:', audioBuffer.duration);
+        
+        const source = audioContext.createBufferSource();
+        source.buffer = audioBuffer;
+        source.loop = loop;
+        
+        const gainNode = audioContext.createGain();
+        source.connect(gainNode);
+        
+        return { source, gainNode };
+    } catch (error) {
+        console.error('Error creating audio source for:', url, error);
+        throw error;
+    }
 }
 
 // Initialize zones
